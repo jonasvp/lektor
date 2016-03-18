@@ -176,7 +176,7 @@ class RsyncPublisher(Publisher):
 
     def get_command(self, target_url, tempdir, credentials):
         credentials = credentials or {}
-        argline = ['rsync', '-rclzv', '--exclude=.lektor']
+        argline = ['rsync', '-rclzv', '--delete', '--exclude=.lektor']
         target = []
         env = {}
 
